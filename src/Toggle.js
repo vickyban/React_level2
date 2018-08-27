@@ -16,7 +16,7 @@ export default class Toggle extends Component {
       <div>
         {/* {if on then execute (to do)} */}
         {this.state.on && (
-          <h1>Toggle Me</h1>
+          this.props.children
         )}
         <button onClick={this.toggle}>Show/Hide</button>
       </div>
