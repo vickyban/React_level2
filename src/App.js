@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Toggle from './ToggleRPC'
-import Portal from './Portal'
+import { Toggle, Portal, Modal } from './Utilities';
 
 class App extends Component {
   render() {
@@ -15,17 +14,13 @@ class App extends Component {
         <Toggle>
           {({ on, toggle }) => (
             <Fragment>
-              {on && <h1>Show Me</h1>}
-              <button onClick={toggle}>Show/Hide</button>
-              <Portal>
-                {on && <h1>Hi, I'm in a portal inside Toggle</h1>}
-              </Portal>
+              <button onClick={toggle}>Login</button>
+              <Modal on={on} toggle={toggle}>
+                <h1>Still a Modal</h1>
+              </Modal>
             </Fragment>
           )}
         </Toggle>
-        <Portal>
-          <h1>Hi, I'm in a portal</h1>
-        </Portal>
       </div>
     );
   }

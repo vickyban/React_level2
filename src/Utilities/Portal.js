@@ -17,6 +17,7 @@ export default class Portal extends Component {
     portalRoot.removeChild(this.el);
   };
 
+  pro
 
   render() {
     const { children } = this.props;

@@ -14,7 +14,6 @@ export default class Toggle extends Component {
   render() {
     return (
       <div>
-        {/* {if on then execute (to do)} */}
         {this.state.on && (
           this.props.children
         )}
