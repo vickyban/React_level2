@@ -11,13 +11,22 @@ class UserProvider extends Component {
     id: '123',
     name: 'Scott',
     email: 'poyo@gmail.com'
-  }
+  };
+
+  logout = () => {
+    this.setState({
+      id: null,
+      name: '',
+      email: ''
+    });
+  };
 
   render() {
     return (
       <UserContext.Provider
         value={{                       // Set data that need to be user later
-          user: this.state
+          user: this.state,
+          logout: this.logout
         }}
       >
         {this.props.children}
