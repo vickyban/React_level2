@@ -1,8 +1,12 @@
 //export * from './Filename'
 
-import Icon from './Icon';
-import Modal from './Modal';
 import Portal from './Portal';
 import Toggle from './ToggleRPC';
+import elevation from './elevation';
+import transition from './transition';
+import colors from './color';
 
-export { Icon, Modal, Portal, Toggle }
+
+export * from './color';
+export * from './position';    // use export before this is not default export set
+export { Portal, Toggle, elevation, transition, colors };
